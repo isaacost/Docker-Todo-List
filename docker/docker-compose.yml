@@ -8,11 +8,11 @@ services:
     depends_on:
       - "todoback"
     environment:
-       - REACT_APP_API_HOST=todoback
+      - REACT_APP_API_HOST=todoback
   todoback:
     image: todobackend
     ports:
-      -3001:3001
+      - 3001:3001
   todotests:
     image: todotests
     environment:
@@ -20,4 +20,5 @@ services:
     depends_on:
       - "todoback"
       - "todofront"
-  
+
+
